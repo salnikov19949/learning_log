@@ -8,7 +8,6 @@ RUN apt-get update \
 WORKDIR /home/tony/projects/learning_log
 COPY requirements.txt ./
 RUN pip install -r requirements.txt
-ADD /home/tony/projects/learning_log
 
 EXPOSE 9095
 CMD ["python", "manage.py", "runserver", "0.0.0.0:9095"]
