@@ -13,6 +13,6 @@ COPY learning_logs ./
 COPY manage.py ./
 COPY Procfile ./
 COPY runtime.txt ./
-copy user ./
+copy users ./
 EXPOSE 9095
-CMD ["python", "manage.py", "runserver", "0.0.0.0:9095"]
+CMD ["python", "manage.py", "runserver", "9095"]
