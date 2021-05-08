@@ -8,13 +8,7 @@ RUN apt-get update \
 WORKDIR /home/tony/projects/learning_log
 COPY requirements.txt ./
 RUN pip install -r requirements.txt
-COPY learning_log ./
-COPY learning_logs ./
-COPY ll_env ./
-COPY manage.py ./
-COPY Procfile ./
-COPY runtime.txt ./
-copy users ./
-copy db.sqlite3 ./
+ADD /home/tony/projects/learning_log /usr/
+RUN cd /usr/learning_log
 EXPOSE 9095
 CMD ["python", "manage.py", "runserver", "9095"]
