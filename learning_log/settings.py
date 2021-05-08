@@ -25,7 +25,7 @@ SECRET_KEY = '5&xrju!7gtqw!$+ivqb3=f-xt+mx%*@9s!0j*l^ce2ih$-w)6='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -127,5 +127,5 @@ STATIC_URL = '/static/'
 
 #Мои настройки
 LOGIN_URL = '/users/login/'
-
+DEFAULT_AUTO_FIELD='django.db.models.AutoField'
 
