@@ -8,7 +8,7 @@ pipeline {
         }    
         stage('Create Docker Container'){
             steps{
-                sh "docker container run -p 9095:8080 --name learning_log${env.BUILD_ID} learning_log:${env.BUILD_ID}"
+                sh "docker container run -p 9095:8080 -d --name learning_log${env.BUILD_ID} learning_log:${env.BUILD_ID}"
             }
         }
     }
